@@ -1,8 +1,13 @@
+require('dotenv').config()
 // require necessary NPM packages
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const AWS = require('aws-sdk')
+
+AWS.config.update({ region: 'us-east-1' })
+console.log(AWS)
 
 // require route files
 const exampleRoutes = require('./app/routes/example_routes')
